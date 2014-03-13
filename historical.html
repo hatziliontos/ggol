@@ -22,7 +22,7 @@ var channelsLoaded = 0;
 // the 'T' Temperature left axis, or the 'O' Other right axis.
 var channelKeys =[];
 channelKeys.push({channelNumber:9528, name:'Water Network Pressure',key:'XXXXXXXXXXXXXXXX',
-                  fieldList:[{field:1,axis:'O'},{field:2,axis:'O'},{field:3,axis:'O'}]});
+                  fieldList:[{field:1,axis:'T'},{field:2,axis:'O'},{field:3,axis:'O'}]});
 //channelKeys.push({channelNumber:5683, name:'Sam Rogers Solar System',key:'XXXXXXXXXXXXXXXX',
 //   fieldList:[{field:1,axis:'T'},{field:2,axis:'T'},{field:3,axis:'T'},{field:4,axis:'T'},{field:5,axis:'T'},{field:6,axis:'T'}]});
 //channelKeys.push({channelNumber:9354, name:'CRYSTAL CITY WEATHER Fault',key:'XXXXXXXXXXXXXXXX',
@@ -246,7 +246,7 @@ $(document).ready(function()
       },
     tooltip: {
       valueDecimals: 1,
-      valueSuffix: 'Â°F',
+      valueSuffix: 'bar/100',
       xDateFormat:'%Y-%m-%d<br/>%1:%M:%S %p'
          // reformat the tooltips so that local times are displayed
          //formatter: function() {
@@ -269,7 +269,7 @@ $(document).ready(function()
       },
       yAxis: [{
             title: {
-                text: 'bar*100'
+                text: 'bar/100'
             },
             id: 'T'
     }, {
