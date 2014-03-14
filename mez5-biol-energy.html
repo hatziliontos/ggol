@@ -24,7 +24,7 @@ var channelKeys =[];
 channelKeys.push({channelNumber:10792, name:'1phase Watts',key:'XXXXXXXXXXXXXXXX',
                   fieldList:[{field:1,axis:'T'}]});
 channelKeys.push({channelNumber:10668, name:'3phase Amps',key:'XXXXXXXXXXXXXXXX',
-                  fieldList:[{field:1,axis:'T'}]});
+                  fieldList:[{field:1,axis:'O'}]});
 //channelKeys.push({channelNumber:9354, name:'CRYSTAL CITY WEATHER Fault',key:'XXXXXXXXXXXXXXXX',
 //   fieldList:[{field:1,axis:'T'},{field:2,axis:'O'},{field:3,axis:'O'},{field:4,axis:'O'},{field:5,axis:'O'},{field:6,axis:'O'}]});
     
@@ -246,7 +246,7 @@ $(document).ready(function()
       },
     tooltip: {
       valueDecimals: 1,
-      valueSuffix: 'bar/100',
+      valueSuffix: 'W',
       xDateFormat:'%Y-%m-%d<br/>%1:%M:%S %p'
          // reformat the tooltips so that local times are displayed
          //formatter: function() {
@@ -269,7 +269,7 @@ $(document).ready(function()
       },
       yAxis: [{
             title: {
-                text: 'bar/100'
+                text: 'W'
             },
             id: 'T'
     }, {
