@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+var element=document.getElementById("header");
+element.innerHTML="New ";
+</script>
+
+<iframe width="1300" height="260" style="border: 1px solid #cccccc;" 
+src="http://api.thingspeak.com/channels/10792/charts/1?
+title=Electrical Installation - Panel 015/24hr profile&
+xaxis=DateTime&
+yaxis=1phase Watts&
+color=red&
+bgcolor=&
+type=line&
+width=1300&
+height=260&
+dynamic=false&
+step=true&
+export=true&
+results=4500&
+//days=1&
+//start=2014-03-12%2000:00:00&
+//end=  2014-03-12%2023:59:59&
+//offset=&
+//status=true&
+//location=true&
+//min=&
+//max=&
+//round=&
+//timescale=&
+//sum=&
+average=0&
+//median=&
+"></iframe>
+
+<iframe width="650" height="260" style="border: 1px solid #cccccc;" 
+src="http://api.thingspeak.com/channels/10792/charts/1?
+title=Electrical Installation - Panel 015/Last 1hr profile&
+xaxis=DateTime&
+yaxis=1phase Watts&
+color=red&
+bgcolor=&
+type=line&
+width=650&
+height=260&
+dynamic=true&
+step=true&
+export=true&
+results=180&
+//days=1&
+//start=2014-03-12%2000:00:00&
+//end=  2014-03-12%2023:59:59&
+//offset=&
+//status=true&
+//location=true&
+//min=&
+//max=&
+//round=&
+//timescale=&
+//sum=&
+average=0&
+//median=&
+"></iframe>
+
+<iframe width="650" height="260" style="border: 1px solid #cccccc;" 
+src="http://api.thingspeak.com/channels/10792/charts/1?
+title=Electrical Installation - Panel 015/24hr profile per hour&
+xaxis=DateTime&
+yaxis=1phase Watts&
+color=red&
+bgcolor=&
+type=column&
+width=650&
+height=260&
+dynamic=false&
+step=true&
+export=true&
+results=4500&
+//days=1&
+//start=2014-03-12%2000:00:00&
+//end=  2014-03-12%2023:59:59&
+//offset=&
+//status=true&
+//location=true&
+//min=&
+//max=&
+//round=&
+//timescale=&
+//sum=&
+average=60&
+//median=&
+"></iframe>
+
+</body>
+</html>
