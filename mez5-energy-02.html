@@ -1,6 +1,5 @@
 <html>
 
-<head>
 <script language='JavaScript' type='text/JavaScript'>
 function GetDate(){
   document.getElementById("frame1").src="http://api.thingspeak.com/channels/10792/charts/1?"+
@@ -21,17 +20,10 @@ function GetDate(){
   "average=60&";
 }
 </script>
-<title></title>
-
-</head>
-
-<body>
-
 
 <form name="form1" >
     <a href="javascript:GetDate()">Graph</a>
     Year:<input type=text name="etos" value="2014">Month:<input type=text name="mhnas" value="03">Day:<input type=text name="mera" value="12"><br>
-    <iframe id="frame1" width="650" height="260" style="border: 1px solid #cccccc;" src=""></iframe>
 </form>
-</body>
+    <iframe id="frame1" width="650" height="260" style="border: 1px solid #cccccc;" src=""></iframe>
 </html>
