@@ -1,59 +1,38 @@
-<!DOCTYPE html>
 <html>
-<body>
-<script>
-function myFunction()
-{
-document.getElementById("myframe").src="http://api.thingspeak.com/channels/10792/charts/1?"+
-"title=Electrical Installation - Panel 015/24hr profile per hour&"+
-"xaxis=DateTime&"+
-"yaxis=1phase Watts&"+
-"color=red&"+
-"bgcolor=&"+
-"type=column&"+
-"width=650&"+
-"height=260&"+
-"dynamic=false&"+
-"step=true&"+
-"export=true&"+
-"results=4500&"+
-"start=2014-03-12%2000:00:00&"+
-"end=  2014-03-12%2023:59:59&"+
-"average=60&"
-";
+
+<head>
+<script language='JavaScript' type='text/JavaScript'>
+function GetDate(){
+  document.getElementById("frame1").src="http://api.thingspeak.com/channels/10792/charts/1?"+
+  "title=Electrical Installation - Panel 015/24hr profile per hour&"+
+  "xaxis=DateTime&"+
+  "yaxis=1phase Watts&"+
+  "color=red&"+
+  "bgcolor=&"+
+  "type=column&"+
+  "width=650&"+
+  "height=260&"+
+  "dynamic=false&"+
+  "step=true&"+
+  "export=true&"+
+  "results=4500&"+
+  "start="+document.form1.etos.value+"-"+document.form1.mhnas.value+"-"+document.form1.mera.value+"%2000:00:00&"+
+  "end="  +document.form1.etos.value+"-"+document.form1.mhnas.value+"-"+document.form1.mera.value+"%2023:59:59&"+
+  "average=60&";
 }
 </script>
+<title></title>
 
-<button onclick="myFunction()">Try it</button>
+</head>
 
-<iframe id="myframe" width="650" height="260" style="border: 1px solid #cccccc;" 
-src="http://api.thingspeak.com/channels/10792/charts/1?
-title=Electrical Installation - Panel 015/24hr profile per hour&
-xaxis=DateTime&
-yaxis=1phase Watts&
-color=red&
-bgcolor=&
-type=column&
-width=650&
-height=260&
-dynamic=false&
-step=true&
-export=true&
-results=4500&
-//days=1&
-//start=2014-03-12%2000:00:00&
-//end=  2014-03-12%2023:59:59&
-//offset=&
-//status=true&
-//location=true&
-//min=&
-//max=&
-//round=&
-//timescale=&
-//sum=&
-average=60&
-//median=&
-"></iframe>
+<body>
 
+
+<form name="form1" >
+    <a href="javascript:GetDate()">Graph</a>
+    Year:<input type=text name="etos" value="2014">Month:<input type=text name="mhnas" value="03">Day:<input type=text name="mera" value="12"><br>
+    <iframe id="frame1" width="650" height="260" style="border: 1px solid #cccccc;" src=""></iframe>
+</form>
 </body>
+
 </html>
