@@ -9,7 +9,7 @@ function GetDate(){
   var mhnas2=mhnas1;
   var etos2=etos1;
   document.getElementById("frame1").src="http://api.thingspeak.com/channels/10792/charts/1?"+
-  "title=Electrical Installation - Panel 015/24hr profile per hour&"+
+  "title=Electrical Installation - Panel 015/24hr profile per hour - "+mera1+"/"+mhnas1+"/"+etos1+"&"+
   "xaxis=DateTime&"+
   "yaxis=1phase Watts&"+
   "color=red&"+
@@ -25,7 +25,7 @@ function GetDate(){
   "end="  +etos1+"-"+mhnas1+"-"+mera1+"%2023:59:59&"+
   "average=60&";
   document.getElementById("frame2").src="http://api.thingspeak.com/channels/10792/charts/1?"+
-  "title=Electrical Installation - Panel 015/24hr profile per hour&"+
+  "title=Electrical Installation - Panel 015/24hr profile per hour - "+mera2+"/"+mhnas2+"/"+etos2+"&"+
   "xaxis=DateTime&"+
   "yaxis=1phase Watts&"+
   "color=red&"+
