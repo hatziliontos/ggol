@@ -8,6 +8,15 @@ function GetDate(){
   var mera2=1*mera1+1;
   var mhnas2=mhnas1;
   var etos2=etos1;
+
+if ((mera1==30)&&((mhnas1==04)||(mhnas1==06)||(mhnas1==09)||(mhnas1==11))) {
+    mhnas2=1*mhnas1+1;
+    mera2=01;
+}
+if ((mera1==31)&&((mhnas1==01)||(mhnas1==03)||(mhnas1==05)||(mhnas1==07)||(mhnas1==08)||(mhnas1==10)||(mhnas1==12))) {
+    mhnas2=1*mhnas1+1;
+    mera2=01;
+}
   document.getElementById("frame1").src="http://api.thingspeak.com/channels/10792/charts/1?"+
   "title=Electrical Installation - Panel 015/24hr profile per hour - "+mera1+"/"+mhnas1+"/"+etos1+"&"+
   "xaxis=DateTime&"+
