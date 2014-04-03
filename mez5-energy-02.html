@@ -2,6 +2,12 @@
 
 <script language='JavaScript' type='text/JavaScript'>
 function GetDate(){
+  var day1=document.form1.mera.value;
+  var mhnas1=document.form1.mhnas.value;
+  var etos1=document.form1.etos.value;
+  var day2=day1+1;
+  var mhnas2=mhnas1;
+  var etos2=etos1;
   document.getElementById("frame1").src="http://api.thingspeak.com/channels/10792/charts/1?"+
   "title=Electrical Installation - Panel 015/24hr profile per hour&"+
   "xaxis=DateTime&"+
@@ -15,8 +21,24 @@ function GetDate(){
   "step=true&"+
   "export=true&"+
   "results=4500&"+
-  "start="+document.form1.etos.value+"-"+document.form1.mhnas.value+"-"+document.form1.mera.value+"%2000:00:00&"+
-  "end="  +document.form1.etos.value+"-"+document.form1.mhnas.value+"-"+document.form1.mera.value+"%2023:59:59&"+
+  "start="+etos1+"-"+mhnas1+"-"+mera1+"%2000:00:00&"+
+  "end="  +etos1+"-"+mhnas1+"-"+mera1+"%2023:59:59&"+
+  "average=60&";
+  document.getElementById("frame2").src="http://api.thingspeak.com/channels/10792/charts/1?"+
+  "title=Electrical Installation - Panel 015/24hr profile per hour&"+
+  "xaxis=DateTime&"+
+  "yaxis=1phase Watts&"+
+  "color=red&"+
+  "bgcolor=&"+
+  "type=column&"+
+  "width=650&"+
+  "height=260&"+
+  "dynamic=false&"+
+  "step=true&"+
+  "export=true&"+
+  "results=4500&"+
+  "start="+etos2+"-"+mhnas2+"-"+mera2+"%2000:00:00&"+
+  "end="  +etos2+"-"+mhnas2+"-"+mera2+"%2023:59:59&"+
   "average=60&";
 }
 </script>
@@ -26,4 +48,5 @@ function GetDate(){
     Year:<input type=text name="etos" value="2014">Month:<input type=text name="mhnas" value="03">Day:<input type=text name="mera" value="12"><br>
 </form>
     <iframe id="frame1" width="650" height="260" style="border: 1px solid #cccccc;" src=""></iframe>
+    <iframe id="frame2" width="650" height="260" style="border: 1px solid #cccccc;" src=""></iframe>
 </html>
