@@ -10,34 +10,28 @@ function GetDate(){
   var etos2=1*etos1;
 
 if ((mera1==30)&&((mhnas1==04)||(mhnas1==06)||(mhnas1==09)||(mhnas1==11))) {
-    mhnas2=1*mhnas1+1;
-    mera2=01;
+    mhnas2=1*mhnas1+1; mera2=01;
 }
 if ((mera1==31)&&((mhnas1==01)||(mhnas1==03)||(mhnas1==05)||(mhnas1==07)||(mhnas1==08)||(mhnas1==10)||(mhnas1==12))) {
     mhnas2=1*mhnas1+1;
     if (mhnas2==13) {
-      mhnas2=01;
-      etos2=1*etos1+1;
+      mhnas2=01; etos2=1*etos1+1;
     }
     mera2=01;
 }
 if ((mera1==28)&&(mhnas1==02)) {
-  mhnas2=03;
-  mera2=01;
+  mhnas2=03; mera2=01;
   if ((etos1==2016)||(etos1==2020)||(etos1==2024)) {
-    mhnas2=02;
-    mera2=29;
+    mhnas2=02; mera2=29;
   }
 }
 if ((mera1==29)&&(mhnas1==02)) {
-  mera1=28;
+  mera1=28; mhnas2=03; mera2=01;
   if ((etos1==2016)||(etos1==2020)||(etos1==2024)) {
-    mera1=29;
-    mhnas2=03;
-    mera2=01;
+    mera1=29; mhnas2=03; mera2=01;
   }
 }
-  document.getElementById("frame1").src="http://api.thingspeak.com/channels/10792/charts/1?"+
+document.getElementById("frame1").src="http://api.thingspeak.com/channels/10792/charts/1?"+
   "title=Electrical Installation - Panel 015/24hr profile per hour - "+mera1+"/"+mhnas1+"/"+etos1+"&"+
   "xaxis=DateTime&"+
   "yaxis=1phase Watts&"+
@@ -48,7 +42,7 @@ if ((mera1==29)&&(mhnas1==02)) {
   "height=260&"+
   "dynamic=false&"+
   "step=true&"+
-//  "export=true&"+
+  "export=true&"+
   "results=4500&"+
   "start="+etos1+"-"+mhnas1+"-"+mera1+"%2000:00:00&"+
   "end="  +etos1+"-"+mhnas1+"-"+mera1+"%2023:59:59&"+
@@ -64,7 +58,7 @@ if ((mera1==29)&&(mhnas1==02)) {
   "height=260&"+
   "dynamic=false&"+
   "step=true&"+
-//  "export=true&"+
+  "export=true&"+
   "results=4500&"+
   "start="+etos2+"-"+mhnas2+"-"+mera2+"%2000:00:00&"+
   "end="  +etos2+"-"+mhnas2+"-"+mera2+"%2023:59:59&"+
